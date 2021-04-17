@@ -1,0 +1,12 @@
+[
+    {
+        "id": "http://arxiv.org/abs/cond-mat/0102536v1",
+        "title": "Title 1",
+        "parent": ""
+    },
+    {
+        "id": "http://arxiv.org/abs/astro-ph/0608371v1",
+        "title": "Title 2",
+        "parent": "http://arxiv.org/abs/cond-mat/0102536v1"
+    }
+]

@@ -1,12 +1,30 @@
 [
     {
-        "id": "http://arxiv.org/abs/cond-mat/0102536v1",
+        "id": "https://arxiv.org/abs/2104.07587",
         "title": "Title 1",
-        "parent": ""
+        "parent": "",
+        "x":50,
+        "y":20
     },
     {
-        "id": "http://arxiv.org/abs/astro-ph/0608371v1",
+        "id": "https://arxiv.org/abs/2004.00071",
         "title": "Title 2",
-        "parent": "http://arxiv.org/abs/cond-mat/0102536v1"
+        "parent": "https://arxiv.org/abs/2104.07587",
+        "x":20,
+        "y":250
+    },
+    {
+        "id": "https://arxiv.org/abs/1707.05340",
+        "title": "Title 2",
+        "parent": "https://arxiv.org/abs/2004.00071",
+        "x":350,
+        "y":80
+    },
+    {
+        "id": "https://arxiv.org/abs/2004.06203",
+        "title": "Title 2",
+        "parent": "https://arxiv.org/abs/2004.00071",
+        "x":500,
+        "y":20
     }
 ]

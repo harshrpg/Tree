@@ -20,11 +20,8 @@ export async function getStaticProps() {
   // Call an external API endpoint to get posts
   const res = await fetch('http://export.arxiv.org/api/query?search_query=all:electron')
   const xml = await res.text();
-  // const json = parser.toJson(xml);
-  // const posts = await res.json()
   const json = JSON.parse(parser.toJson(xml));
   const entries =  json.feed.entry;
-  // console.log(posts.feed.entry[0]);
   // By returning { props: { posts } }, the Blog component
   // will receive `posts` as a prop at build time
   return {

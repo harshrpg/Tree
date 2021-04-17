@@ -1,16 +1,18 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
+import Chart from "./Chart";
+import Rectangle from "./components/elements/Rectangle/Rectangle";
+import Tree from './components/modules/tree';
+
 var parser = require('xml2json');
 
 function Home({entries}) {
   return (
     <div className={styles.container}>
-      <ul>
-        {entries.map((entry) => (
-          <li>{entry.title}</li>
-        ))}
-      </ul>
+      <main>
+        <Tree entries={entries}/>
+      </main>
     </div>
   )
 }

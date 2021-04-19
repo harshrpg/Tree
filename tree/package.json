@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3005",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
     "d3": "^6.7.0",
     "d3-selection": "^2.0.0",
     "lodash": "^4.17.21",
@@ -22,5 +23,6 @@
     "react-xarrows": "^1.6.1",
     "styled-components": "^5.2.3",
     "xml2json": "^0.12.0"
-  }
+  },
+  "browser": { "fs": false, "path": false, "os": false}
 }

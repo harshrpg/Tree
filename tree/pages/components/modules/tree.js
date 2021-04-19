@@ -1,10 +1,11 @@
 // import Xarrow from "../elements/arrow/arrow"
 // import Xarrow from "react-xarrows/lib"
-import Leaf from "../elements/leaf/leaf"
+// import Leaf from "../elements/leaf/leaf"
 import dynamic from 'next/dynamic';
 import React, { useState, useRef } from "react";
 import Draggable from "react-draggable";
-import styles from './tree.module.css'
+import styles from './tree.module.css';
+import Link from 'next/link';
 
 const Xarrow = dynamic(() => import('react-xarrows'), {
     ssr: false
@@ -91,15 +92,24 @@ function Tree(props) {
                 //   position_left={ entry.x}
                 //   position_top={entry.y}
                 //     />
-                <Draggable onStop={forceRerender} onDrag={forceRerender} key={i}>
-                <div
-                  id={box.id}
-                  className={styles.card}
-                  style={{ ...boxStyle, left: box.x, top: box.y }}
-                >
-                  {box.title}
-                </div>
-                </Draggable>
+                
+                    <Draggable onStop={forceRerender} onDrag={forceRerender} key={i}>
+                        <Link 
+                            href={{
+                                pathname: '../../content/[paper_id]',
+                                query: {paper_id:box.id, dev: true}
+                            }}>
+                        <div
+                        id={box.id}
+                        className={styles.card}
+                        style={{ ...boxStyle, left: box.x, top: box.y }}
+                        >
+                            {box.title}
+                        </div>
+                        </Link>
+                    </Draggable>
+                
+                
             ))
         }
     
